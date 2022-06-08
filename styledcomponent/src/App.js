@@ -1,20 +1,26 @@
-import {themeProvider} from 'styled-components'
+import {ThemeProvider} from 'styled-components'
 import Container from "./components/Container";
 import Header from './components/Header'
 
-
+const theme = {
+  color:{
+    header:'#ebfbff',
+    body:'#fff',
+    footer:'#333',
+  }
+}
 function App() {
   return (
-    <themeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
        <>
-    <Header bg="cyan">
+    <Header>
       <h1>HELLO</h1>
       </Header>
       <Container>
         <a href="#">Login</a>
       </Container>
       </>
-    </themeProvider>
+    </ThemeProvider>
   
   );
 }
